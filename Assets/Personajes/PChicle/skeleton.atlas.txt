@@ -1,0 +1,90 @@
+
+skeleton.png
+size: 1019,1012
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Mechon
+  rotate: false
+  xy: 312, 327
+  size: 288, 685
+  orig: 288, 685
+  offset: 0, 0
+  index: -1
+armL
+  rotate: false
+  xy: 831, 691
+  size: 151, 321
+  orig: 151, 321
+  offset: 0, 0
+  index: -1
+armR
+  rotate: false
+  xy: 2, 26
+  size: 215, 272
+  orig: 215, 272
+  offset: 0, 0
+  index: -1
+eyesClose
+  rotate: false
+  xy: 312, 303
+  size: 95, 22
+  orig: 95, 22
+  offset: 0, 0
+  index: -1
+eyesOpen
+  rotate: false
+  xy: 602, 342
+  size: 82, 13
+  orig: 82, 13
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 2, 300
+  size: 308, 712
+  orig: 308, 712
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 831, 545
+  size: 122, 144
+  orig: 122, 144
+  offset: 0, 0
+  index: -1
+mouthOpen0
+  rotate: false
+  xy: 984, 997
+  size: 35, 15
+  orig: 35, 15
+  offset: 0, 0
+  index: -1
+mouthOpen1
+  rotate: false
+  xy: 2, 2
+  size: 44, 22
+  orig: 44, 22
+  offset: 0, 0
+  index: -1
+shoulderL
+  rotate: false
+  xy: 219, 229
+  size: 86, 69
+  orig: 86, 69
+  offset: 0, 0
+  index: -1
+shoulderR
+  rotate: false
+  xy: 831, 474
+  size: 86, 69
+  orig: 86, 69
+  offset: 0, 0
+  index: -1
+tronco
+  rotate: false
+  xy: 602, 357
+  size: 227, 655
+  orig: 227, 655
+  offset: 0, 0
+  index: -1

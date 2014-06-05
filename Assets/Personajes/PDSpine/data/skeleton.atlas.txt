@@ -1,0 +1,174 @@
+
+skeleton.png
+size: 1006,1018
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ceja1
+  rotate: false
+  xy: 758, 436
+  size: 38, 29
+  orig: 38, 29
+  offset: 0, 0
+  index: -1
+MejL
+  rotate: false
+  xy: 585, 208
+  size: 83, 93
+  orig: 83, 93
+  offset: 0, 0
+  index: -1
+MejR
+  rotate: true
+  xy: 670, 319
+  size: 94, 88
+  orig: 94, 88
+  offset: 0, 0
+  index: -1
+armL0
+  rotate: false
+  xy: 220, 130
+  size: 110, 179
+  orig: 110, 179
+  offset: 0, 0
+  index: -1
+armL1
+  rotate: false
+  xy: 220, 415
+  size: 267, 50
+  orig: 267, 50
+  offset: 0, 0
+  index: -1
+armL2
+  rotate: false
+  xy: 2, 244
+  size: 107, 221
+  orig: 107, 221
+  offset: 0, 0
+  index: -1
+armLC0
+  rotate: false
+  xy: 332, 130
+  size: 110, 179
+  orig: 110, 179
+  offset: 0, 0
+  index: -1
+armLC1
+  rotate: false
+  xy: 220, 363
+  size: 267, 50
+  orig: 267, 50
+  offset: 0, 0
+  index: -1
+armLC2
+  rotate: false
+  xy: 2, 21
+  size: 107, 221
+  orig: 107, 221
+  offset: 0, 0
+  index: -1
+armR0
+  rotate: true
+  xy: 220, 18
+  size: 110, 179
+  orig: 110, 179
+  offset: 0, 0
+  index: -1
+armR1
+  rotate: false
+  xy: 489, 415
+  size: 267, 50
+  orig: 267, 50
+  offset: 0, 0
+  index: -1
+armR2
+  rotate: false
+  xy: 111, 244
+  size: 107, 221
+  orig: 107, 221
+  offset: 0, 0
+  index: -1
+armRC0
+  rotate: true
+  xy: 489, 303
+  size: 110, 179
+  orig: 110, 179
+  offset: 0, 0
+  index: -1
+armRC1
+  rotate: false
+  xy: 220, 311
+  size: 267, 50
+  orig: 267, 50
+  offset: 0, 0
+  index: -1
+armRC2
+  rotate: false
+  xy: 111, 21
+  size: 107, 221
+  orig: 107, 221
+  offset: 0, 0
+  index: -1
+cejaHappy
+  rotate: false
+  xy: 2, 2
+  size: 33, 17
+  orig: 33, 17
+  offset: 0, 0
+  index: -1
+cejaUngry
+  rotate: false
+  xy: 401, 115
+  size: 41, 13
+  orig: 41, 13
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 725, 295
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+eyeOpen
+  rotate: false
+  xy: 444, 120
+  size: 56, 56
+  orig: 56, 56
+  offset: 0, 0
+  index: -1
+mouthClose
+  rotate: true
+  xy: 978, 962
+  size: 56, 28
+  orig: 56, 28
+  offset: 0, 0
+  index: -1
+mouthClose1
+  rotate: true
+  xy: 670, 204
+  size: 113, 53
+  orig: 113, 53
+  offset: 0, 0
+  index: -1
+mouthOpen
+  rotate: false
+  xy: 444, 178
+  size: 139, 123
+  orig: 139, 123
+  offset: 0, 0
+  index: -1
+tronco
+  rotate: false
+  xy: 2, 467
+  size: 486, 551
+  orig: 486, 551
+  offset: 0, 0
+  index: -1
+troncoC
+  rotate: false
+  xy: 490, 467
+  size: 486, 551
+  orig: 486, 551
+  offset: 0, 0
+  index: -1
