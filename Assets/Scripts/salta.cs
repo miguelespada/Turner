@@ -23,6 +23,7 @@ public class salta : MonoBehaviour {
 			rigidbody2D.velocity = Vector2.up * speed;
 			j = false;
 			state = 1;
+			plataformaJump();
 		}
 
 	}
@@ -43,5 +44,16 @@ public class salta : MonoBehaviour {
 		j = true;
 	}
 
+	void plataformaJump(){
+		foreach (Transform child in transform.parent) 
+		{
+			if (child.name == "collider")
+			{
+				child.rigidbody2D.AddForce(Vector2.up * 10000);
+				child.audio.Play();
+				
+			}
+		}
+	}
 }
 

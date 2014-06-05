@@ -13,8 +13,7 @@ public class plataforma: MonoBehaviour {
 	}
 
 
-	void Update () {
-					
+	void Update () {			
 		if ((Input.GetKeyDown (jumpKey) || j) && state == 0) {
 			rigidbody2D.AddForce(Vector2.up * 10000);
 			j = false;
