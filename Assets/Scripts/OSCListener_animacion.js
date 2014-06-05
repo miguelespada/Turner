@@ -19,15 +19,12 @@ public function Start ()
 
 function Update () {	
 	if(prevValor != valor){
-  		gameObject.Find("Ben10").GetComponent("animacionBen10").SendMessage ("anima", valor);
-  		gameObject.Find("Darwin").GetComponent("animacionDarwin").SendMessage ("anima", valor);
-  		gameObject.Find("Finn").GetComponent("animacionFinn").SendMessage ("anima", valor);
-  		gameObject.Find("Mordecai").GetComponent("animacionMordecai").SendMessage ("anima", valor);
-  		gameObject.Find("PChicle").GetComponent("animacionPChicle").SendMessage ("anima", valor);
-  		gameObject.Find("TitoYayo").GetComponent("animacionTitoYayo").SendMessage ("anima", valor);
-  		gameObject.Find("Confetti").GetComponent("animacionConfetti").SendMessage ("anima", valor);
-  		gameObject.Find("Confetti_2").GetComponent("animacionConfetti1").SendMessage ("anima", valor);
-  		gameObject.Find("Confetti_3").GetComponent("animacionConfetti2").SendMessage ("anima", valor);
+  		gameObject.Find("Ben10").GetComponent("animacion").SendMessage ("anima", valor);
+  		gameObject.Find("Darwin").GetComponent("animacion").SendMessage ("anima", valor);
+  		gameObject.Find("Finn").GetComponent("animacion").SendMessage ("anima", valor);
+  		gameObject.Find("Mordecai").GetComponent("animacion").SendMessage ("anima", valor);
+  		gameObject.Find("PChicle").GetComponent("animacion").SendMessage ("anima", valor);
+  		gameObject.Find("TitoYayo").GetComponent("animacion").SendMessage ("anima", valor);
 
 		prevValor = valor;
 	}
