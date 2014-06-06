@@ -32,10 +32,8 @@ public class objeto: MonoBehaviour {
 	IEnumerator playAnimation(){
 		int v = UnityEngine.Random.Range (0, animation.GetClipCount ());
 		animationName = "anim_" + v;
-		Debug.Log("Before Waiting 2 seconds");
 
 		yield return new WaitForSeconds(2);
-		Debug.Log("After Waiting 2 Seconds");
 
 		animation.Play(animationName);
 	}
