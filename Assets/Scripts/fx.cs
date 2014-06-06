@@ -46,6 +46,7 @@ public class fx : MonoBehaviour {
 			sparks.SetActive(true);
 			fireworks.SetActive(true);
 		}
+		if(valor >= 0) valor = -1; 
 	}
 
 	void anima(int v){

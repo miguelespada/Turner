@@ -44,6 +44,7 @@ public class camera_fx : MonoBehaviour {
 
 		float v = UnityEngine.Random.Range(0.2f, 0.3f);
 		glow.glowTint = new Color(v,v,v,1);
+		if(valor >= 0) valor = -1; 
 	}
 
 	void anima(int v){
