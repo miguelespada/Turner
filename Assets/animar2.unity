@@ -3492,6 +3492,7 @@ GameObject:
   - 124: {fileID: 1948930777}
   - 92: {fileID: 1948930776}
   - 81: {fileID: 1948930775}
+  - 114: {fileID: 1948930779}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -3564,6 +3565,24 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
+--- !u!114 &1948930779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948930773}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1352984e3c6465088f6cc7c4ce6e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowIntensity: 1.5
+  blurIterations: 3
+  blurSpread: .699999988
+  glowTint: {r: 1, g: 1, b: 1, a: 0}
+  compositeShader: {fileID: 4800000, guid: 96ca71e39c7b6fb4f9bec2c5bf331349, type: 3}
+  blurShader: {fileID: 4800000, guid: fb52973118cf00648825ced2fcca240c, type: 3}
+  downsampleShader: {fileID: 4800000, guid: b14b79b8936134d3f8238f0c2d40d634, type: 3}
 --- !u!1 &2006005777
 GameObject:
   m_ObjectHideFlags: 0
