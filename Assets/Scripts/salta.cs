@@ -18,6 +18,8 @@ public class salta : MonoBehaviour {
 
 
 	void Update () {
+		if(state == 2)
+			StartCoroutine(backToNormal());
 
 		if (state == 0 && (Input.GetKeyDown (jumpKey) || j) ) {
 			skeletonAnimation.state.SetAnimation (0, "jumpUp", false);
@@ -33,7 +35,6 @@ public class salta : MonoBehaviour {
 		if(state == 2) return;
 		if(coll.gameObject.tag == "plataforma"){
 			skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
-			
 			StartCoroutine(playEffect());
 			state = 0;
 		}
@@ -74,10 +75,13 @@ public class salta : MonoBehaviour {
 		Fx.SetActive(true);
 		yield return new WaitForSeconds(1);
 		Fx.SetActive(false);
-		
-
 	}
-	
+
+	IEnumerator backToNormal(){
+		yield return new WaitForSeconds(2);
+		state = 0;
+		skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
+	}
 
 }
 
