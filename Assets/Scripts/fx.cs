@@ -16,14 +16,12 @@ public class fx : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown ("1") || valor == 0) {
 
-			print("level:0");
 			red_c.SetActive(false);
 			green_c.SetActive(false);
 			sparks.SetActive(false);
 			fireworks.SetActive(false);
 		}
 		if (Input.GetKeyDown ("2") || valor == 1) {
-			print("level:1");
 			red_c.SetActive(true);
 			green_c.SetActive(false);
 			sparks.SetActive(false);
