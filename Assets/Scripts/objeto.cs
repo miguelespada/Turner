@@ -22,11 +22,9 @@ public class objeto: MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		audio.Play();
+		transform.parent.GetComponent<logic>().nextState();
 		Fx = Instantiate(Fx, transform.position, transform.rotation) as GameObject;
 		Destroy(Fx, 2);
-		transform.parent.GetComponent<logic>().nextState();
-		active = false;
 	}
 
 	IEnumerator playAnimation(){

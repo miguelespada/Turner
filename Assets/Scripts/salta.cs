@@ -30,6 +30,7 @@ public class salta : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
+		if(state == 2) return;
 		if(coll.gameObject.tag == "plataforma"){
 			skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
 			
@@ -42,7 +43,20 @@ public class salta : MonoBehaviour {
 
 		}
 	}
-	
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.gameObject.name == "camiseta"){
+			skeletonAnimation.state.SetAnimation (0, "jumpDown", false);
+			skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
+			state = 2;
+		}
+		print(other);
+			other.audio.Play();
+
+
+			other.gameObject.SetActive(false);
+
+	}
+
 	void jump(float v){
 		j = true;
 	}
