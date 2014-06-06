@@ -20,15 +20,10 @@ public class logic : MonoBehaviour {
 	public void nextState(){
 		state += 1;
 		if(state == 1){
-			balon.active = false;
 			cup.active = true;
 		}
 		if(state == 2){
-			cup.active = false;
 			camiseta.active = true;
-		}
-		if(state == 3){
-			camiseta.active = false;
 		}
 	}
 }
