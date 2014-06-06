@@ -6,18 +6,17 @@ using System;
 public class objeto: MonoBehaviour {
 	
 	public GameObject Fx;
+	private string animationName;
 
 	void Start ()
 	{
-		animation.Play ();
-		UnityEngine.Random.Range (0, animation.GetClipCount ());
+		playAnimation ();
+
 	}
 
 	void Update(){
-		if (Input.GetKeyDown ("a")){
-			int v = UnityEngine.Random.Range (0, animation.GetClipCount ());
-			animation.Play("anim_" + v);
-			              
+		if (!animation.IsPlaying (animationName) || Input.GetKeyDown ("a")) {
+			playAnimation();
 		}
 	}
 
@@ -28,5 +27,10 @@ public class objeto: MonoBehaviour {
 		Destroy(gameObject);
 	}
 
+	void playAnimation(){
+		int v = UnityEngine.Random.Range (0, animation.GetClipCount ());
+		animationName = "anim_" + v;
+		animation.Play(animationName);
+	}
 }
 
