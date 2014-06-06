@@ -24,7 +24,7 @@ public class objeto: MonoBehaviour {
 		audio.Play();
 		Fx = Instantiate(Fx, transform.position, transform.rotation) as GameObject;
 		Destroy(Fx, 2);
-		Destroy(gameObject);
+		transform.parent.GetComponent<logic>().nextState();
 	}
 
 	void playAnimation(){
