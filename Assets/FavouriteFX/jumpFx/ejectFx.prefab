@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: .718966067, y: 0, z: 0, w: .695045233}
-  m_LocalPosition: {x: -1.97038364, y: -32.2941551, z: -9.08189583}
+  m_LocalPosition: {x: -1.48194504, y: -32.2941551, z: -9.08189583}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +58,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 2
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -73,7 +73,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .0250000004
+          value: .199999988
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -198,7 +198,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .400000006
+      scalar: 5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -213,7 +213,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .49999997
+          value: .0140000004
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -245,13 +245,13 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 100
     inheritVelocity: 0
-    maxNumParticles: 20
+    maxNumParticles: 10
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 8
-    radius: 2
-    angle: 0
+    type: 2
+    radius: 4
+    angle: 30
     length: 4
     boxX: 1
     boxY: 1
