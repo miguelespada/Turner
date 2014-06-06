@@ -80,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .813815117, y: 7.40285587, z: -.585856438}
+  m_LocalPosition: {x: 51.0989151, y: 27.4034805, z: -26.701973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -250,10 +250,10 @@ ParticleSystem:
         rgba: 3023874815
       maxColor:
         serializedVersion: 2
-        rgba: 2161841151
+        rgba: 2832929791
       minMaxState: 0
     startSize:
-      scalar: 1.20000005
+      scalar: 30
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -268,13 +268,13 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .5
+          value: .166666672
           inSlope: 0
           outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 0
+      minMaxState: 3
     startRotation:
       scalar: 0
       maxCurve:
@@ -1115,7 +1115,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 2
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1130,7 +1130,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .5
+          value: .100000001
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1138,7 +1138,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 3
     startSpeed:
-      scalar: .5
+      scalar: 100
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1262,10 +1262,10 @@ ParticleSystem:
         rgba: 3023874815
       maxColor:
         serializedVersion: 2
-        rgba: 2161805823
+        rgba: 1490717183
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1280,7 +1280,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .099999994
+          value: .0500000007
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2284,7 +2284,7 @@ ParticleSystem:
         rgba: 2151459583
       maxColor:
         serializedVersion: 2
-        rgba: 2161639679
+        rgba: 4292346111
       minMaxState: 0
     startSize:
       scalar: 10
@@ -2349,7 +2349,7 @@ ParticleSystem:
     m_Mesh: {fileID: 0}
     randomDirection: 1
   EmissionModule:
-    enabled: 0
+    enabled: 1
     m_Type: 0
     rate:
       scalar: 10
