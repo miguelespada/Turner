@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: Gumball Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: b1eb62b1933b14524839bf8f276bf914, type: 3}
+  atlasFile: {fileID: 4900000, guid: c1283c17f3b64414db9874c5c5cfd42d, type: 3}
   materials:
-  - {fileID: 2100000, guid: f3ba1de9f5e6c454689acc8b005d5122, type: 2}
-  - {fileID: 2100000, guid: 9dd2b36ed41fd47dfa756695ef2d8e86, type: 2}
-  - {fileID: 2100000, guid: df8fc5fede7f04fe6b81b7fbbbcd2eb3, type: 2}
-  - {fileID: 2100000, guid: a24c36b0aabea41708378b80c8641b28, type: 2}
-  - {fileID: 2100000, guid: 530628ced44654efa8e964c9b6865deb, type: 2}
+  - {fileID: 2100000, guid: d810bea2ccefd4061a1b0514cb108534, type: 2}
+  - {fileID: 2100000, guid: 425b7796706ce4cdea900db68cb59bbf, type: 2}
+  - {fileID: 2100000, guid: 7abb3174ecddd41328d76d3246b2e14d, type: 2}
+  - {fileID: 2100000, guid: 35c0c7b34cbc54ab1b49f83f05222efa, type: 2}
+  - {fileID: 2100000, guid: 19045e48f45b843abb71aa6e717aef11, type: 2}

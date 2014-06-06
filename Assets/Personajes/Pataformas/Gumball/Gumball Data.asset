@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
   m_Name: Gumball Data
   m_EditorClassIdentifier: 
-  atlasAsset: {fileID: 11400000, guid: 6438c7323090346b2b57b51c823e5bb9, type: 2}
-  skeletonJSON: {fileID: 4900000, guid: edb1e1f8dfc324d17918ac66176ade24, type: 3}
+  atlasAsset: {fileID: 11400000, guid: 6ba48a7f174ff43088f36bd1bbad641d, type: 2}
+  skeletonJSON: {fileID: 4900000, guid: 20bc74909a2e041679a6a7bde940c7fe, type: 3}
   scale: .00600000005
   fromAnimation: []
   toAnimation: []
