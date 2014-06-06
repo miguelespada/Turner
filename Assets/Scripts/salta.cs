@@ -10,6 +10,7 @@ public class salta : MonoBehaviour {
 	int state = 0;
 	public int speed = 3000;
 	public string jumpKey = "a"; 
+	public GameObject Fx;
 
 	void Start () {
 		skeletonAnimation = GetComponent<SkeletonAnimation>();
@@ -31,6 +32,8 @@ public class salta : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if(coll.gameObject.tag == "plataforma"){
 			skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
+			
+			StartCoroutine(playEffect());
 			state = 0;
 		}
 		else{
@@ -54,6 +57,14 @@ public class salta : MonoBehaviour {
 				
 			}
 		}
+	}
+
+	IEnumerator playEffect(){
+		Fx.SetActive(true);
+		yield return new WaitForSeconds(1);
+		Fx.SetActive(false);
+		
+
 	}
 }
 
