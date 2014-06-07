@@ -803,6 +803,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fondo_red: {fileID: 100002}
   fondo_green: {fileID: 100018}
+  Audio_2: {fileID: 0}
+  Audio_3: {fileID: 0}
+  Audio_4: {fileID: 0}
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1
