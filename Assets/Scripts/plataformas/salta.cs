@@ -45,13 +45,16 @@ public class salta : MonoBehaviour {
 		}
 	}
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.name == "camiseta"){
-			skeletonAnimation.state.SetAnimation (0, "jumpDown", false);
-			skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
-			state = 2;
+		
+		if (other.gameObject.layer == gameObject.layer) { 
+			if (other.gameObject.name == "camiseta") {
+				skeletonAnimation.state.SetAnimation (0, "jumpDown", false);
+				skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
+				state = 2;
+			}
+			other.audio.Play ();
+			Destroy (other.gameObject, 0.1f);
 		}
-		other.audio.Play();
-		Destroy(other.gameObject, 0.1f);
 
 	}
 
