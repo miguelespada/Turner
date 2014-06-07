@@ -18,6 +18,8 @@ public class salta : MonoBehaviour {
 
 
 	void Update () {
+		if(state == 2)
+			StartCoroutine(backToNormal());
 
 		if (state == 0 && (Input.GetKeyDown (jumpKey) || j) ) {
 			skeletonAnimation.state.SetAnimation (0, "jumpUp", false);
@@ -30,9 +32,9 @@ public class salta : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
+		if(state == 2) return;
 		if(coll.gameObject.tag == "plataforma"){
 			skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
-			
 			StartCoroutine(playEffect());
 			state = 0;
 		}
@@ -42,7 +44,17 @@ public class salta : MonoBehaviour {
 
 		}
 	}
-	
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.gameObject.name == "camiseta"){
+			skeletonAnimation.state.SetAnimation (0, "jumpDown", false);
+			skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
+			state = 2;
+		}
+		other.audio.Play();
+		Destroy(other.gameObject, 0.1f);
+
+	}
+
 	void jump(float v){
 		j = true;
 	}
@@ -63,8 +75,13 @@ public class salta : MonoBehaviour {
 		Fx.SetActive(true);
 		yield return new WaitForSeconds(1);
 		Fx.SetActive(false);
-		
-
 	}
+
+	IEnumerator backToNormal(){
+		yield return new WaitForSeconds(2);
+		state = 0;
+		skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
+	}
+
 }
 
