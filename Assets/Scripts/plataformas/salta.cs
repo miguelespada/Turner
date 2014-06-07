@@ -8,9 +8,10 @@ public class salta : MonoBehaviour {
 	SkeletonAnimation skeletonAnimation;
 	bool j; 
 	int state = 0;
-	public int speed = 3000;
+	int speed = 3000;
 	public string jumpKey = "a"; 
 	public GameObject Fx;
+	public int backToNormalTime = 3;
 
 	void Start () {
 		skeletonAnimation = GetComponent<SkeletonAnimation>();
@@ -81,7 +82,7 @@ public class salta : MonoBehaviour {
 	}
 
 	IEnumerator backToNormal(){
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(backToNormalTime);
 		state = 0;
 		skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
 	}

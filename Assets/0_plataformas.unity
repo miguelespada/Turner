@@ -978,9 +978,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40b5f1c0be114a3ead6771cea29db55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3000
   jumpKey: 1
   Fx: {fileID: 1853895877}
+  backToNormalTime: 3
 --- !u!114 &310883823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,9 +1076,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40b5f1c0be114a3ead6771cea29db55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3000
   jumpKey: 2
   Fx: {fileID: 1363514606}
+  backToNormalTime: 3
 --- !u!61 &321073066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3019,9 +3019,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40b5f1c0be114a3ead6771cea29db55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8000
   jumpKey: 3
   Fx: {fileID: 2068949845}
+  backToNormalTime: 3
 --- !u!114 &1318935850
 MonoBehaviour:
   m_ObjectHideFlags: 0
