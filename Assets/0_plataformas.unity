@@ -478,7 +478,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 2300000, guid: 823805b791b45410386515010f02e43f, type: 2}
       propertyPath: m_Materials.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 823805b791b45410386515010f02e43f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -511,7 +511,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 823805b791b45410386515010f02e43f, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 51736f9c36e7c457e94d31db2005e07c, type: 2}
+      objectReference: {fileID: 2100000, guid: 0d6c1eeb6df26484fa44f99d65c2d597, type: 2}
     - target: {fileID: 3300000, guid: 823805b791b45410386515010f02e43f, type: 2}
       propertyPath: m_Mesh
       value: 
@@ -531,13 +531,21 @@ Prefab:
     - target: {fileID: 2300000, guid: 823805b791b45410386515010f02e43f, type: 2}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 0d6c1eeb6df26484fa44f99d65c2d597, type: 2}
+      objectReference: {fileID: 2100000, guid: 51736f9c36e7c457e94d31db2005e07c, type: 2}
     - target: {fileID: 2300000, guid: 823805b791b45410386515010f02e43f, type: 2}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 0d6c1eeb6df26484fa44f99d65c2d597, type: 2}
+      objectReference: {fileID: 2100000, guid: 51736f9c36e7c457e94d31db2005e07c, type: 2}
     - target: {fileID: 2300000, guid: 823805b791b45410386515010f02e43f, type: 2}
       propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d6c1eeb6df26484fa44f99d65c2d597, type: 2}
+    - target: {fileID: 2300000, guid: 823805b791b45410386515010f02e43f, type: 2}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d6c1eeb6df26484fa44f99d65c2d597, type: 2}
+    - target: {fileID: 2300000, guid: 823805b791b45410386515010f02e43f, type: 2}
+      propertyPath: m_Materials.Array.data[5]
       value: 
       objectReference: {fileID: 2100000, guid: 51736f9c36e7c457e94d31db2005e07c, type: 2}
     m_RemovedComponents: []
@@ -3049,6 +3057,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
+  - {fileID: 2100000, guid: 0d6c1eeb6df26484fa44f99d65c2d597, type: 2}
   - {fileID: 2100000, guid: 51736f9c36e7c457e94d31db2005e07c, type: 2}
   - {fileID: 2100000, guid: 0d6c1eeb6df26484fa44f99d65c2d597, type: 2}
   - {fileID: 2100000, guid: 51736f9c36e7c457e94d31db2005e07c, type: 2}
