@@ -50,11 +50,10 @@ public class salta : MonoBehaviour {
 				skeletonAnimation.state.SetAnimation (0, "jumpDown", false);
 				skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
 				transform.Find("audio_camiseta").audio.Play();
-
+				state = 2;
 			}
 			else {
 				transform.Find("audio_coge").audio.Play();
-//					transform.parent.Find("items").GetComponent<logic> ().nextState ();
 			}
 			Destroy (other.gameObject, 0.1f);
 		}
@@ -86,6 +85,8 @@ public class salta : MonoBehaviour {
 		yield return new WaitForSeconds(backToNormalTime);
 		state = 0;
 		skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
+		transform.parent.Find("items").GetComponent<logic> ().Reset ();
+
 	}
 
 	void setGravityScale(int speed){

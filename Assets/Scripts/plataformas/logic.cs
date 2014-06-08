@@ -10,11 +10,17 @@ public class logic : MonoBehaviour {
 	
 	public float itemRate = 2F;
 	public float nextItem = 0F;
-	public float nextCamiseta = 10F;
+	private float nextCamiseta;
+	public float camisetaRate = 10F;
 	private bool hasCamiseta = false;
 	void Start ()
 	{
+		Reset();
 
+	}
+	public void Reset(){
+		nextCamiseta = Time.time + camisetaRate; 
+		hasCamiseta = false;
 	}
 	public void Update(){
 		if(hasCamiseta) return;
