@@ -52,6 +52,10 @@ public class salta : MonoBehaviour {
 				skeletonAnimation.state.SetAnimation (0, "jumpDown", false);
 				skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
 				state = 2;
+				transform.Find("audio_camiseta").audio.Play();
+			}
+			else {
+				transform.Find("audio_coge").audio.Play();
 			}
 			Destroy (other.gameObject, 0.1f);
 		}
