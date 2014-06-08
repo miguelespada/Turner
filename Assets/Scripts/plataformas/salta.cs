@@ -53,7 +53,6 @@ public class salta : MonoBehaviour {
 				skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
 				state = 2;
 			}
-			other.audio.Play ();
 			Destroy (other.gameObject, 0.1f);
 		}
 

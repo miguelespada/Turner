@@ -26,6 +26,8 @@ public class objeto: MonoBehaviour {
 			if (!hasSent) {	
 				transform.parent.GetComponent<logic> ().nextState ();
 				hasSent = true;
+				audio.Play();
+				print("playing");
 			}
 			Fx = Instantiate (Fx, transform.position, transform.rotation) as GameObject;
 			Destroy (Fx, 2);
