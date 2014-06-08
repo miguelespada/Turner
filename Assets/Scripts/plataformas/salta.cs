@@ -96,6 +96,7 @@ public class salta : MonoBehaviour {
 		else if(level == 5) rigidbody2D.gravityScale = 8;
 		else if(level == 6) rigidbody2D.gravityScale = 6;
 		else rigidbody2D.gravityScale = 12.5f;
+		rigidbody2D.gravityScale += UnityEngine.Random.Range(-1f, 1f);
 	}
 
 }
