@@ -5,9 +5,9 @@ private var oscHandler : Osc;
 
 static var valor : int = 0;
 
-var speed_PD: int = 0;
-var speed_Gumball: int = 0;
-var speed_Jake: int = 0;
+var speed_PD: int = 4;
+var speed_Gumball: int = 4;
+var speed_Jake: int = 4;
 var jump_PD: boolean = false;
 var jump_Gumball: boolean = false;
 var jump_Jake: boolean = false;
@@ -32,9 +32,19 @@ function Update () {
   	gameObject.Find("Gumball").GetComponent("salta").SendMessage ("jump", speed_Gumball);
   	jump_Gumball = false;
   }
-  if(jump_Jake || Input.GetKeyDown("1")){
-  	gameObject.Find("Jake").GetComponent("salta").SendMessage ("jump", 4);
+  if(jump_Jake){
+  	gameObject.Find("Jake").GetComponent("salta").SendMessage ("jump", speed_Jake);
   	jump_Jake = false;
+  }  
+  
+  if(Input.GetKeyDown("1")){
+  	gameObject.Find("PD").GetComponent("salta").SendMessage ("jump", 3);
+ }
+  if(Input.GetKeyDown("2")){
+  	gameObject.Find("Gumball").GetComponent("salta").SendMessage ("jump", 3);
+  }
+  if(Input.GetKeyDown("3")){
+  	gameObject.Find("Jake").GetComponent("salta").SendMessage ("jump", 3);
   }  
 
 }	

@@ -7,14 +7,14 @@ public class salta : MonoBehaviour {
 
 	SkeletonAnimation skeletonAnimation;
 	int level = 0; 
-	int state = 0;
+	public int state = -1;
 	int speed = 3000;
-	public string jumpKey = "a"; 
 	public GameObject Fx;
 	public int backToNormalTime = 3;
 
 	void Start () {
 		skeletonAnimation = GetComponent<SkeletonAnimation>();
+		state = -1;
 	}
 
 
@@ -34,7 +34,7 @@ public class salta : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		if(state == 2) return;
+		if(state != 1) return;
 
 		if(coll.gameObject.tag == "plataforma"){
 			skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
@@ -62,6 +62,10 @@ public class salta : MonoBehaviour {
 
 	void jump(int v){
 		level = v;
+		if(state == -1) {
+			transform.parent.Find("items").GetComponent<logic> ().Reset ();
+			state = 0;
+		}
 	}
 
    void plataformaJump(){
@@ -83,10 +87,8 @@ public class salta : MonoBehaviour {
 
 	IEnumerator backToNormal(){
 		yield return new WaitForSeconds(backToNormalTime);
-		state = 0;
+		state = -1;
 		skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
-		transform.parent.Find("items").GetComponent<logic> ().Reset ();
-
 	}
 
 	void setGravityScale(int speed){

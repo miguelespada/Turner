@@ -12,21 +12,24 @@ public class logic : MonoBehaviour {
 	public float nextItem = 0F;
 	private float nextCamiseta;
 	public float camisetaRate = 10F;
-	private bool hasCamiseta = false;
+	private bool hasCamiseta = true;
 	void Start ()
 	{
 		Reset();
-
+		hasCamiseta = true;
 	}
+
 	public void Reset(){
 		nextCamiseta = Time.time + camisetaRate; 
 		hasCamiseta = false;
+		nextItem = Time.time;
 	}
+
 	public void Update(){
 		if(hasCamiseta) return;
 		if(Time.time > nextCamiseta){
 			item = Instantiate (camiseta	) as GameObject;
-			item.transform.position = transform.position;
+			item.transform.parent = transform;
 			item.layer = gameObject.layer;
 			hasCamiseta = true;
 			deleteObjects();
@@ -39,7 +42,7 @@ public class logic : MonoBehaviour {
 	}
 	private void createItem(){
 		item =  Instantiate (items[Random.Range(0, 4)]) as GameObject;
-		item.transform.position = transform.position;
+		item.transform.parent = transform;
 		item.layer = gameObject.layer;
 	}
 
