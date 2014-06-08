@@ -25,19 +25,21 @@ function Update () {
   		gameObject.Find("Mordecai").GetComponent("animar").SendMessage ("anima", valor);
   		gameObject.Find("PChicle").GetComponent("animar").SendMessage ("anima", valor);
   		gameObject.Find("TitoYayo").GetComponent("animar").SendMessage ("anima", valor);
-  		gameObject.Find("fx").GetComponent("fx").SendMessage ("anima", valor);
-		
-		
-		prevValor = valor;
+  		gameObject.Find("Camera").GetComponent("fx").SendMessage ("anima", valor);
+		  prevValor = valor;
 	}
-  
+  if (Input.anyKeyDown && Input.inputString.length == 1){
+    var keyPressed : int = parseInt(Input.inputString) ;
+    if(keyPressed >= 1 && keyPressed <= 5){
+      valor = keyPressed - 1;
+    }
+  }  
 }	
 
 public function processingData(oscMessage : OscMessage) : void
 {	
   Osc.OscMessageToString(oscMessage);
   valor = parseInt(oscMessage.Values[0])	;
-
 } 
 
 function OnApplicationQuit() {
