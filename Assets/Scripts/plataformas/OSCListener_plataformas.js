@@ -5,6 +5,13 @@ private var oscHandler : Osc;
 
 static var valor : int = 0;
 
+var speed_PD: int = 0;
+var speed_Gumball: int = 0;
+var speed_Jake: int = 0;
+var jump_PD: boolean = false;
+var jump_Gumball: boolean = false;
+var jump_Jake: boolean = false;
+
 
 public function Start ()
 {	
@@ -17,14 +24,19 @@ public function Start ()
 }
 
 function Update () {
-  if(valor == 1)
-  	gameObject.Find("PD").GetComponent("salta").SendMessage ("jump", 0);
-  if(valor == 2)
-  	gameObject.Find("Gumball").GetComponent("salta").SendMessage ("jump", 0);
-  if(valor == 3)
-  	gameObject.Find("Jake").GetComponent("salta").SendMessage ("jump", 0);
   
-  if(valor > 0) valor = -1;
+  if(jump_PD){
+  	gameObject.Find("PD").GetComponent("salta").SendMessage ("jump", speed_PD);
+  	jump_PD = false;
+  }
+  if(jump_Gumball){
+  	gameObject.Find("Gumball").GetComponent("salta").SendMessage ("jump", speed_Gumball);
+  	jump_Gumball = false;
+  }
+  if(jump_Jake){
+  	gameObject.Find("Jake").GetComponent("salta").SendMessage ("jump", speed_Jake);
+  	jump_Jake = false;
+  }  
 
 }	
 
@@ -32,8 +44,21 @@ public function processingData(oscMessage : OscMessage) : void
 {	
   Osc.OscMessageToString(oscMessage);
   valor = parseInt(oscMessage.Values[0]);
+  
+  if(valor == 1) {
+  	speed_PD = parseInt(oscMessage.Values[1]);
+  	jump_PD = true;
+  }
+  if(valor == 2) {
+  	speed_Gumball = parseInt(oscMessage.Values[1]);
+  	jump_Gumball = true;
+  }
+  if(valor == 3) {
+  	speed_Jake = parseInt(oscMessage.Values[1]);
+  	jump_Jake = true;
+  }
 
-} 
+ } 
 
 function OnApplicationQuit() {
 	oscHandler.Cancel();

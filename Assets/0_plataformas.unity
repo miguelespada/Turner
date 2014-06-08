@@ -3147,6 +3147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af238cfaa37654c6a9f402035da99129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed_PD: 0
+  speed_Gumball: 0
+  speed_Jake: 0
+  jump_PD: 0
+  jump_Gumball: 0
+  jump_Jake: 0
 --- !u!4 &1239848210
 Transform:
   m_ObjectHideFlags: 0
