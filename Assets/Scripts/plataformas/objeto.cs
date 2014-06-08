@@ -7,12 +7,9 @@ public class objeto: MonoBehaviour {
 	
 	public GameObject Fx;
 	private string animationName;
-	Boolean hasSent = false;
 	void Start ()
 	{
-
 		StartCoroutine(playAnimation());
-
 	}
 
 	void Update(){
@@ -23,10 +20,6 @@ public class objeto: MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.layer == gameObject.layer) { 
-			if (!hasSent) {	
-				transform.parent.GetComponent<logic> ().nextState ();
-				hasSent = true;
-			}
 			Fx = Instantiate (Fx, transform.position, transform.rotation) as GameObject;
 			Destroy (Fx, 2);
 		}

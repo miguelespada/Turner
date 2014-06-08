@@ -46,14 +46,15 @@ public class salta : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		
 		if (other.gameObject.layer == gameObject.layer) { 
-			if (other.gameObject.name == "camiseta") {
+			if (other.gameObject.tag == "camiseta") {
 				skeletonAnimation.state.SetAnimation (0, "jumpDown", false);
 				skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
 				transform.Find("audio_camiseta").audio.Play();
-				state = 2;
+
 			}
 			else {
 				transform.Find("audio_coge").audio.Play();
+//					transform.parent.Find("items").GetComponent<logic> ().nextState ();
 			}
 			Destroy (other.gameObject, 0.1f);
 		}

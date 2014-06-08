@@ -4,6 +4,8 @@
 TagManager:
   tags:
   - plataforma
+  - camiseta
+  - item
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

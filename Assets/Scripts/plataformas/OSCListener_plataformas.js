@@ -24,7 +24,6 @@ public function Start ()
 }
 
 function Update () {
-  
   if(jump_PD){
   	gameObject.Find("PD").GetComponent("salta").SendMessage ("jump", speed_PD);
   	jump_PD = false;
@@ -33,8 +32,8 @@ function Update () {
   	gameObject.Find("Gumball").GetComponent("salta").SendMessage ("jump", speed_Gumball);
   	jump_Gumball = false;
   }
-  if(jump_Jake){
-  	gameObject.Find("Jake").GetComponent("salta").SendMessage ("jump", speed_Jake);
+  if(jump_Jake || Input.GetKeyDown("1")){
+  	gameObject.Find("Jake").GetComponent("salta").SendMessage ("jump", 4);
   	jump_Jake = false;
   }  
 

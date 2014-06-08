@@ -4,18 +4,44 @@ using System.Collections;
 public class logic : MonoBehaviour {
 
 	// Use this for initialization
-	public int state = 0;
-	public GameObject cup;
-	public GameObject balon;
+	GameObject item;
+	public GameObject[] items;
 	public GameObject camiseta;
+	
+	public float itemRate = 2F;
+	public float nextItem = 0F;
+	public float nextCamiseta = 10F;
+	private bool hasCamiseta = false;
+	void Start ()
+	{
 
-	public void nextState(){
-		state += 1;
-		if(state == 1){
-			cup.SetActive(true);
+	}
+	public void Update(){
+		if(hasCamiseta) return;
+		if(Time.time > nextCamiseta){
+			item = Instantiate (camiseta	) as GameObject;
+			item.transform.position = transform.position;
+			item.layer = gameObject.layer;
+			hasCamiseta = true;
+			deleteObjects();
+
 		}
-		if(state == 2){
-			camiseta.SetActive(true);
+		else if(Time.time > nextItem){
+			nextItem = Time.time + itemRate;
+			createItem();
+		}
+	}
+	private void createItem(){
+		item =  Instantiate (items[Random.Range(0, 4)]) as GameObject;
+		item.transform.position = transform.position;
+		item.layer = gameObject.layer;
+	}
+
+	private void deleteObjects(){
+		
+		foreach (GameObject item in GameObject.FindGameObjectsWithTag("item")) {
+			if(item.layer == gameObject.layer)
+				Destroy(item);
 		}
 	}
 }

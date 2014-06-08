@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 111: {fileID: 11100000}
   m_Layer: 8
-  m_Name: balon
+  m_Name: silbato
   m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5f4e42af4eae340049bc65d541708e53, type: 2}
+  - {fileID: 2100000, guid: 13a28d78f4c07456c972c41454cf8e06, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
