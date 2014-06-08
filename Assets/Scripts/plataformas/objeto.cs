@@ -22,12 +22,14 @@ public class objeto: MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if(!hasSent){	
-			transform.parent.GetComponent<logic>().nextState();
-			hasSent = true;
+		if (other.gameObject.layer == gameObject.layer) { 
+			if (!hasSent) {	
+				transform.parent.GetComponent<logic> ().nextState ();
+				hasSent = true;
+			}
+			Fx = Instantiate (Fx, transform.position, transform.rotation) as GameObject;
+			Destroy (Fx, 2);
 		}
-		Fx = Instantiate(Fx, transform.position, transform.rotation) as GameObject;
-		Destroy(Fx, 2);
 	}
 
 	IEnumerator playAnimation(){

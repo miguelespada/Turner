@@ -8,9 +8,10 @@ public class salta : MonoBehaviour {
 	SkeletonAnimation skeletonAnimation;
 	bool j; 
 	int state = 0;
-	public int speed = 3000;
+	int speed = 3000;
 	public string jumpKey = "a"; 
 	public GameObject Fx;
+	public int backToNormalTime = 3;
 
 	void Start () {
 		skeletonAnimation = GetComponent<SkeletonAnimation>();
@@ -45,13 +46,16 @@ public class salta : MonoBehaviour {
 		}
 	}
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.name == "camiseta"){
-			skeletonAnimation.state.SetAnimation (0, "jumpDown", false);
-			skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
-			state = 2;
+		
+		if (other.gameObject.layer == gameObject.layer) { 
+			if (other.gameObject.name == "camiseta") {
+				skeletonAnimation.state.SetAnimation (0, "jumpDown", false);
+				skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
+				state = 2;
+			}
+			other.audio.Play ();
+			Destroy (other.gameObject, 0.1f);
 		}
-		other.audio.Play();
-		Destroy(other.gameObject, 0.1f);
 
 	}
 
@@ -78,7 +82,7 @@ public class salta : MonoBehaviour {
 	}
 
 	IEnumerator backToNormal(){
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(backToNormalTime);
 		state = 0;
 		skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
 	}
