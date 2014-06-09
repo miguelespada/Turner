@@ -12,6 +12,9 @@ var jump_PD: boolean = false;
 var jump_Gumball: boolean = false;
 var jump_Jake: boolean = false;
 
+var gameTime: int = -1;
+var itemFreq: int = -1;
+
 
 public function Start ()
 {	
@@ -20,6 +23,8 @@ public function Start ()
 	oscHandler = GetComponent("Osc");
 	oscHandler.init(udp);
 	oscHandler.SetAddressHandler("/jump", processingData);
+	oscHandler.SetAddressHandler("/gameTimeLabel", setGameTime);
+	oscHandler.SetAddressHandler("/itemFreqLabel", setItemFreq);
 
 }
 
@@ -47,10 +52,31 @@ function Update () {
   	gameObject.Find("Jake").GetComponent("salta").SendMessage ("jump", 3);
   }  
 
+ if(gameTime > 0){
+ 	for (var items in GameObject.FindGameObjectsWithTag ("items"))
+		items.GetComponent("logic").SendMessage ("setGameTime", gameTime);
+ 	gameTime = -1;
+ }
+ 
+ if(itemFreq > 0){
+ 	for (var items in GameObject.FindGameObjectsWithTag ("items"))
+		items.GetComponent("logic").SendMessage ("setItemFreq", itemFreq);
+ 	itemFreq = -1;
+ }
 }	
 
+public function setGameTime(oscMessage : OscMessage) : void{
+  gameTime = parseInt(oscMessage.Values[0]);
+}
+public function setItemFreq(oscMessage : OscMessage) : void{
+  itemFreq = parseInt(oscMessage.Values[0]);
+	
+}
+
+
 public function processingData(oscMessage : OscMessage) : void
-{	
+{
+		
   Osc.OscMessageToString(oscMessage);
   valor = parseInt(oscMessage.Values[0]);
   

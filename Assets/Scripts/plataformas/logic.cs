@@ -54,4 +54,10 @@ public class logic : MonoBehaviour {
 				Destroy(item);
 		}
 	}
+	public void setGameTime(int value){
+		camisetaRate = value;
+	}
+	public void setItemFreq(int value){
+		itemRate = value;
+	}
 }
