@@ -92,7 +92,6 @@ public class salta : MonoBehaviour {
 		yield return new WaitForSeconds(backToNormalTime);
 		state = -1;
 		skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
-		print("back to normal");
 	}
 
 	void setGravityScale(int speed){
