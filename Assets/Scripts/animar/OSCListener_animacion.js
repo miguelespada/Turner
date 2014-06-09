@@ -1,5 +1,5 @@
 private var UDPHost : String = "127.0.0.1"; // com host
-private var listenerPort : int = 8000; // input port
+private var listenerPort : int = 12000; // input port
 private var broadcastPort : int = 57131; // output port 
 private var oscHandler : Osc;
 
