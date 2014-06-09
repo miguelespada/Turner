@@ -19,7 +19,10 @@ public class salta : MonoBehaviour {
 
 
 	void Update () {
-		if(state == 2) StartCoroutine(backToNormal());
+		if(state == 2) {
+			state = 3;
+			StartCoroutine(backToNormal());
+		}
 
 		if (state == 0 ) {
 			if(level > 0){
@@ -45,7 +48,7 @@ public class salta : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D other) {
 		
-		if (other.gameObject.layer == gameObject.layer) { 
+		if (other.gameObject.layer == gameObject.layer && state == 1) { 
 			if (other.gameObject.tag == "camiseta") {
 				skeletonAnimation.state.SetAnimation (0, "jumpDown", false);
 				skeletonAnimation.state.AddAnimation (0, "idleC", true, 0);
@@ -89,6 +92,7 @@ public class salta : MonoBehaviour {
 		yield return new WaitForSeconds(backToNormalTime);
 		state = -1;
 		skeletonAnimation.state.AddAnimation (0, "idle", true, 0);
+		print("back to normal");
 	}
 
 	void setGravityScale(int speed){
