@@ -23,6 +23,7 @@ public class logic : MonoBehaviour {
 		nextCamiseta = Time.time + camisetaRate; 
 		hasCamiseta = false;
 		nextItem = Time.time;
+		createItem();
 	}
 
 	public void Update(){
