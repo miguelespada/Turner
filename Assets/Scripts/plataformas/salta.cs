@@ -11,14 +11,17 @@ public class salta : MonoBehaviour {
 	int speed = 3000;
 	public GameObject Fx;
 	public int backToNormalTime = 3;
+	private Quaternion q;
 
 	void Start () {
 		skeletonAnimation = GetComponent<SkeletonAnimation>();
 		state = -1;
+		q = transform.rotation; 
 	}
 
 
 	void Update () {
+		transform.rotation = q;
 		if(state == 2) {
 			state = 3;
 			StartCoroutine(backToNormal());
@@ -58,7 +61,7 @@ public class salta : MonoBehaviour {
 			else {
 				transform.Find("audio_coge").audio.Play();
 			}
-			Destroy (other.gameObject, 0.1f);
+			Destroy (other.gameObject);
 		}
 
 	}

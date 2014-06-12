@@ -38,8 +38,12 @@ function Update () {
 
 public function processingData(oscMessage : OscMessage) : void
 {	
+	
+  print("llega");
+
   Osc.OscMessageToString(oscMessage);
-  valor = parseInt(oscMessage.Values[0])	;
+  valor = parseInt(oscMessage.Values[0]);
+  print("llega");
 } 
 
 function OnApplicationQuit() {
